@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="overscroll-none">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>CHU3's Coffee Share</title>
+  <link href="css/tailwind.css" rel="stylesheet" />
+  <link href="css/coffee.css" rel="stylesheet" />
+</head>
+
+<body
+  class="overscroll-none h-screen overflow-hidden flex justify-center items-center bg-white text-black dark:bg-neutral-900 dark:text-white"
+  style="height: 100vh">
+  <div class="Language fixed top-3 right-3">
+    <span class="float-right"><a href="coffee-entrance.html">[EN]</a> / <a href="#">CN</a></span>
+  </div>
+  <div class="text-list flex flex-col items-center justify-center">
+    <div class="absolute mx-0 left-0 right-0 text-center active">
+      <span class="hand-wave">👋</span> Hello, stranger, <br />
+      I'm glad you can click in.
+    </div>
+    <div class="absolute mx-0 left-0 right-0 text-center">
+      <span class="animate-pulse">💖</span> This is a (homemade) coffee
+      sharing website opened by CHU3. <br />
+      I hope you like it~
+    </div>
+  </div>
+
+  <button class="w-12 h-12 bg-black/0 border rounded-full mx-auto absolute mt-44 transition disabled" id="index-button">
+    ➔
+  </button>
+
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      let currentIndex = 0;
+      const textItems = $(".text-list>div");
+      const totalTextItems = textItems.length;
+      textItems.not(":eq(0)").hide();
+
+      $("#index-button").on("click", function () {
+        if (currentIndex < totalTextItems - 1) {
+          textItems.eq(currentIndex).fadeOut(200);
+          currentIndex++;
+          textItems.eq(currentIndex).fadeIn(500);
+        } else if (currentIndex === totalTextItems - 1) {
+          window.location.href = "coffee-index.html";
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+*{
+     /*cursor: none !important;*/
+}
+
+body {
+    background: linear-gradient(to right,
+    rgba(26, 102, 223, 0.8),
+    rgba(26, 102, 223, 0.8)), url(../img/Noise.png);
+
+    transition:all 0.3s ease;
+}
+body.active{
+    background: linear-gradient(to right,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)), url(../img/Noise.png) !important;
+}
+
+/* 向下箭头：动画，向下移动，然后恢复原点，一直循环 */
+.down-arrow{
+    animation: downArrow 1.55s infinite;
+}
+
+@keyframes downArrow {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(12px);
+        opacity:1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+}
+
+
+.bg-bluenoise{
+    background: linear-gradient(to right,
+            rgba(26, 102, 223, 0.8),
+            rgba(26, 102, 223, 0.8)), url(../img/Noise.png);
+}
+
+.cursor{
+    transition: background-color 0.3s ease;
+}
+.cursor.active{
+    background-color: white;
+    /* 放大 */
+}
+
+.bg-primary{
+    background: white
+}

@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #201c18;
+	color: white;
+	transition: 0.5s ease;
+}
+
+/* 咖啡介绍文字效果 */
+.introduce-button-item {
+	color: #686868;
+	border-bottom: 1px solid #686868;
+}
+
+.introduce-button-item.active {
+	color: white;
+	border-bottom: 1px solid rgb(228, 228, 228) !important;
+}
+
+.introduce-button-item .introduce-item-svg {
+	display: none;
+}
+
+.introduce-button-item.active .introduce-item-text {
+	display: none;
+}
+
+.introduce-button-item.active .introduce-item-svg {
+	display: inline !important;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 2rem;
+}
+
+.introduce-content-list {
+	display: none;
+}
+
+.introduce-content-list.active {
+	display: inline !important;
+}
+
+/* place */
+/* .place-content img {
+	display: none;
+}
+.place-content.active img {
+	display: inline;
+}
+
+.place-content.active h1 {
+	display: none;
+} */
+
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+.animate-pulse {
+	display: inline-block;
+	animation: pulse 1.5s infinite;
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.hand-wave {
+	display: inline-block;
+	animation: wave 1.2s infinite ease-in-out;
+}
+
+@keyframes think {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.think-emoji {
+	animation: think 1.5s infinite;
+}
