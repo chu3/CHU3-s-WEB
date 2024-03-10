@@ -1,22 +1,40 @@
-*{
-     /*cursor: none !important;*/
+:root {
+    --lighting-size: 300px;
+    --lighting-color: #9333ea;
+    --lighting-highlight-color: #d8b4fe;
+}
+
+* {
+    /*cursor: none !important;*/
 }
 
 body {
-    background: linear-gradient(to right,
-    rgba(26, 102, 223, 0.8),
-    rgba(26, 102, 223, 0.8)), url(../img/Noise.png);
-
-    transition:all 0.3s ease;
+    background: url(../img/Noise.png);
 }
-body.active{
-    background: linear-gradient(to right,
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.8)), url(../img/Noise.png) !important;
+
+/* body 的基础上加的背景 */
+/* background: url(../img/Noise.png); */
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(217, 79%, 49%);
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+body.active::before {
+    background-color: #000;
 }
 
 /* 向下箭头：动画，向下移动，然后恢复原点，一直循环 */
-.down-arrow{
+.down-arrow {
     animation: downArrow 1.55s infinite;
 }
 
@@ -25,10 +43,12 @@ body.active{
         transform: translateY(0);
         opacity: 0.5;
     }
+
     50% {
         transform: translateY(12px);
-        opacity:1;
+        opacity: 1;
     }
+
     100% {
         transform: translateY(0);
         opacity: 0.5;
@@ -36,20 +56,26 @@ body.active{
 }
 
 
-.bg-bluenoise{
+.bg-bluenoise {
     background: linear-gradient(to right,
             rgba(26, 102, 223, 0.8),
             rgba(26, 102, 223, 0.8)), url(../img/Noise.png);
 }
 
-.cursor{
-    transition: background-color 0.3s ease;
-}
-.cursor.active{
-    background-color: white;
-    /* 放大 */
+
+.bg-primary {
+    background: white
 }
 
-.bg-primary{
-    background: white
+/* 文字选中后的样式 */
+::selection {
+    /* 背景白色 */
+    background: rgba(255, 255, 255, 0.5);
+    /* 文字现实轮廓 */
+    text-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+    /* 文字没有颜色 */
+    color: transparent;
+    border-radius: 100%;
+    border: 10px solid #fff;
+    background-size: 100% 80%;
 }
