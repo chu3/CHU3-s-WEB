@@ -45,3 +45,11 @@ window.addEventListener('scroll', () => {
 });
 
 
+// 下滑后立刻给nav添加.active，不需要过 100vh，上滑到顶部时，移除.active
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        document.querySelector('nav').classList.add('active');
+    } else {
+        document.querySelector('nav').classList.remove('active');
+    }
+});

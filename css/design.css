@@ -1,0 +1,4 @@
+body:before {
+    background-color: #000 !important;
+    opacity: 0.88;
+}

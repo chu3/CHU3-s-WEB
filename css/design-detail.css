@@ -1,0 +1,36 @@
+body {
+    background: none;
+}
+
+body::before {
+    background-color: white !important;
+}
+
+body * {
+    color: black;
+}
+
+nav * {
+    background: none;
+    color: #FFF9AD;
+}
+
+nav.active {
+    background: white !important;
+}
+
+nav.active * {
+    color: black;
+}
+
+.bg-primary {
+    background: black !important;
+}
+
+.detail-header {
+    background-color: #5D64FF;
+}
+
+.detail-header * {
+    color: #FFF9AD;
+}
