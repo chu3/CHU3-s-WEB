@@ -45,12 +45,13 @@
         <!--详情页内容介绍 -->
         <section class="flex flex-col justify-center" id="about-me">
             <!-- 详情标题和简介 -->
-            <div class="detail-header mb-12  pt-64 py-6">
-                <div class="detail-header-content container mx-auto flex flex-row ">
-                    <div class="detail-text basis-1/2 pr-3">
+            <div class="detail-header mb-12  pt-64 py-6 px-3 md:px-0">
+                <div class="detail-header-content container mx-auto flex flex-col md:flex-row">
+                    <!-- 简介 -->
+
+                    <div class="detail-text basis-1/2 md:pr-3">
                         <div class="text-6xl  mb-16 font-sans antialiased">[AI] Stable Diffusion
                             XL Turbo</div>
-                        <!-- 简介 -->
                         <div class="text-2xl mb-16 font-sans antialiased">This is a drawing I made with AI.
                             It's
                             a
@@ -59,22 +60,24 @@
                             drawing, and
                             I'm still learning. I hope you like it.</div>
                     </div>
-                    <div class="detail-img basis-1/2 pl-3">
+                    <!-- 详情图片 -->
+                    <div class="detail-img basis-1/2 md:pl-3">
                         <img src="../img/design/DiffSynth.png" alt="DiffSynth" class="w-full">
-                        <p class="font-sans antialiased text-right">Illustration: Stable Diffusion XL
+                        <p class="font-sans antialiased text-right mt-1">Illustration: Stable Diffusion XL
                             Turbo</p>
                     </div>
                 </div>
 
 
             </div>
-            <hr class="bg-black border-black container mx-auto">
             <!-- 正文部分 -->
-            <div class="container mx-auto my-4">
-                <div class="detail-info flex flex-row">
+            <div class="container mx-auto px-3 md:px-0">
+                <hr class="bg-black border-black container mx-auto my-3">
+
+                <div class="detail-info flex flex-col md:flex-row">
                     <!-- 日期 / 作者/ 标签 -->
                     <p class="font-sans antialiased basis-1/5">March 10, 2024</p>
-                    <div class="font-sans antialiased basis-3/5 px-6">
+                    <div class="font-sans antialiased basis-3/5 my-4 md:my-0  md:px-6">
                         <p class="font-bold">Authors</p>
                         <a href="#" class="underline ">CHU3</a>
                         <!-- 换行 -->
@@ -86,9 +89,9 @@
                         <a href="#" class="hover:underline">[Design]</a>
                     </div>
                 </div>
-                <div class="detail-container flex flex-row mt-16">
+                <div class="detail-container flex flex-col md:flex-row mt-16">
                     <div class="basis-1/5"></div>
-                    <div class="detail-content basis-3/5 px-6">
+                    <div class="detail-content basis-3/5 md:px-6">
                         <p class="font-sans antialiased">
                             In this tutorial, you will learn how to use the Stable Diffusion XL Turbo model and
                             DiffSynth UI to achieve AI painting in Alibaba Cloud Interactive Modeling (PAI-DSW), and
@@ -116,7 +119,8 @@
                                 to the program experience</a>
                         </p>
                     </div>
-                    <div class="detail-content-side  basis-1/5">
+                    <!-- 注释 -->
+                    <div class="detail-content-side  basis-1/5 mt-16 md:mt-0">
                         <small class="font-sans antialiased"><a class="underline"
                                 href="https://developer.aliyun.com/topic/march/pai?spm=5176.28508143.J_ahRFo5CaAe_asSOaCgS4J.8.24ef154aCtowsp">[#]</a>
                             The article is excerpted with the content of
