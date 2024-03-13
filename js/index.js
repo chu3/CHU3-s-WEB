@@ -26,30 +26,12 @@ anchorLinks.forEach(link => {
     });
 });
 
-// 下面class有active 的则在这个标签左右加上[]
-// 例如：[Home]
-var a = document.getElementsByTagName("a");
-for (var i = 0; i < a.length; i++) {
-    if (a[i].classList.contains("active")) {
-        a[i].innerHTML = "[" + a[i].innerHTML + "]";
-    }
-}
+// // 下面class有active 的则在这个标签左右加上[]
+// // 例如：[Home]
+// var a = document.getElementsByTagName("a");
+// for (var i = 0; i < a.length; i++) {
+//     if (a[i].classList.contains("active")) {
+//         a[i].innerHTML = "[" + a[i].innerHTML + "]";
+//     }
+// }
 
-// 下滑超过100vh时，给 body添加.active，上滑到顶部时，移除.active
-window.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight) {
-        document.body.classList.add('active');
-    } else {
-        document.body.classList.remove('active');
-    }
-});
-
-
-// 下滑后立刻给nav添加.active，不需要过 100vh，上滑到顶部时，移除.active
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        document.querySelector('nav').classList.add('active');
-    } else {
-        document.querySelector('nav').classList.remove('active');
-    }
-});
